@@ -28,7 +28,7 @@ namespace R5T.F0140
             textOutput.WriteInformation("=> Assume all XML files are documentation files.");
 
             // Assumes that all XML files in the directory are documentation files.
-            var output = Instances.FileSystemOperator.Enumerate_ChildFilePaths(
+            var output = Instances.FileSystemOperator.Get_ChildFilePaths(
                 directoryPath,
                 Instances.FileExtensions.Xml)
                 .Select(x => x.Value.ToDocumentationXmlFilePath())
